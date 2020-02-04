@@ -1,0 +1,83 @@
+dct64_i386.lo: dct64_i386.c ../config.h dct64_i386.h common.h mpg123.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdio.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/__config \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdio.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/wasi/api.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stddef.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stddef.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdint.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdint.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/features.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/string.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/string.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/string.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/strings.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/signal.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/signal.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/math.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/math.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/math.h \
+  mpglib.h ../include/lame.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdarg.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdarg.h \
+  tabinit.h
+
+../config.h:
+
+dct64_i386.h:
+
+common.h:
+
+mpg123.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdio.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/__config:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdio.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/wasi/api.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stddef.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stddef.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdint.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdint.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/features.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/string.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/string.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/string.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/strings.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/signal.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/signal.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/math.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/math.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/math.h:
+
+mpglib.h:
+
+../include/lame.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdarg.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdarg.h:
+
+tabinit.h:

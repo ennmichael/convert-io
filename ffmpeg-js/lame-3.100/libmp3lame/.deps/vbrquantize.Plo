@@ -1,0 +1,158 @@
+vbrquantize.lo: vbrquantize.c ../config.h ../include/lame.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stddef.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/__config \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stddef.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdarg.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdarg.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdio.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdio.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/wasi/api.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdint.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdint.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/features.h \
+  machine.h version.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/assert.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdlib.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdlib.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdlib.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/alloca.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/string.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/string.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/string.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/strings.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/math.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/math.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/math.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/limits.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/limits.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/limits.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/ctype.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/ctype.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/ctype.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/errno.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/errno.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/errno.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/fcntl.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/fcntl.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/sys/types.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/endian.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/sys/select.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/sys/stat.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/sys/stat.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stat.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/inttypes.h \
+  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/inttypes.h \
+  encoder.h util.h l3side.h id3tag.h lame_global_flags.h vbrquantize.h \
+  quantize_pvt.h
+
+../config.h:
+
+../include/lame.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stddef.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/__config:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stddef.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdarg.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdarg.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdio.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdio.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/wasi/api.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdint.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdint.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/features.h:
+
+machine.h:
+
+version.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/assert.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdlib.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdlib.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdlib.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/alloca.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/string.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/string.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/string.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/strings.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/math.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/math.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/math.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/limits.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/limits.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/limits.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/ctype.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/ctype.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/ctype.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/errno.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/errno.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/errno.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/fcntl.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/fcntl.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/sys/types.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/endian.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/sys/select.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/sys/stat.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/sys/stat.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stat.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/inttypes.h:
+
+/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/inttypes.h:
+
+encoder.h:
+
+util.h:
+
+l3side.h:
+
+id3tag.h:
+
+lame_global_flags.h:
+
+vbrquantize.h:
+
+quantize_pvt.h:
