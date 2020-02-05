@@ -1,8 +1,15 @@
-# Should also disable some other libraries like sdl
+# In the future I will use python to generate the Makefile from a template.
+# A perfect way to do that would be to use another Makefile to generate this one and run it.
+
+build/ffmpeg-flac-mp3.wasm build/ffmpeg-flac-mp3.js: build/ffmpeg-flac-mp3.bc
+	cd build && \
+	emcc ffmpeg.bc -s MODULARIZE=1 -s EXPORT_ES6=1 --pre-js ../pre.js -o ffmpeg-flac-mp3.js
+
+# TODO
+# Should also disable some other libraries like sdl?
 # --disable-autodetect to disable auto detected external libs?
-ffmpeg-mp3-flac: build/libmp3lame/lib/libmp3lame.so
+build/ffmpeg-flac-mp3.bc: build/libmp3lame/lib/libmp3lame.so
 	cd ffmpeg && \
-	make clean && \
 	emconfigure ./configure --disable-doc --disable-ffplay --disable-ffprobe --disable-swscale \
 	--extra-ldflags="-L$(shell pwd)/build/libmp3lame/lib/" --extra-cflags="-I$(shell pwd)/build/libmp3lame/include/" \
 	--disable-avdevice --disable-swresample --disable-everything --enable-encoder=libmp3lame \
@@ -11,9 +18,7 @@ ffmpeg-mp3-flac: build/libmp3lame/lib/libmp3lame.so
 	--enable-parser=mpegaudio --enable-protocol=file --enable-cross-compile --cc=emcc --ar=emar --ranlib=emranlib \
 	--disable-pthreads --disable-w32threads --disable-os2threads --disable-network --disable-asm --disable-stripping && \
 	emmake make -j8 && \
-	cp ffmpeg ../build/ffmpeg.bc && \
-	cd ../build && \
-	emcc ffmpeg.bc
+	mv ffmpeg ../build/ffmpeg-flac-mp3.bc
 
 build/libmp3lame/lib/libmp3lame.so:
 	cd lame-3.100 && \
@@ -25,4 +30,4 @@ build/libmp3lame/lib/libmp3lame.so:
 .PHONY: clean
 
 clean:
-	-rm -rf build/libmp3lame/*
+	-rm -rf build/libmp3lame/* build/*.js build/*.wasm

@@ -1,3 +1,11 @@
+
+var Module = (function() {
+  var _scriptDir = import.meta.url;
+  
+  return (
+function(Module) {
+  Module = Module || {};
+
 // Copyright 2010 The Emscripten Authors.  All rights reserved.
 // Emscripten is available under two separate licenses, the MIT license and the
 // University of Illinois/NCSA Open Source License.  Both these licenses can be
@@ -20,7 +28,17 @@ var Module = typeof Module !== 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// {{PRE_JSES}}
+// We have access to module here, i.e. to the Module object *PASSED*
+// to the modularized JS file. This means client code can put some arbitrary properties
+// on module, and we can use it here. The property will be ffmpegFiles, and we'll use it
+// to create an IDBFS file system with those files. Another useful thing is: if the ffmpegFiles
+// property contains ReadableStreams, which it should, we can in fact stream those files into
+// the FS via FS.write.
+
+function PREJSHEREBOYS() {
+
+}
+
 
 // Sometimes an existing Module object exists with properties
 // meant to overwrite the default module functionality. Here
@@ -113,9 +131,7 @@ if (ENVIRONMENT_IS_NODE) {
 
   arguments_ = process['argv'].slice(2);
 
-  if (typeof module !== 'undefined') {
-    module['exports'] = Module;
-  }
+  // MODULARIZE will export the module in the proper place outside, we don't need to export here
 
   process['on']('uncaughtException', function(ex) {
     // suppress ExitStatus exceptions from showing an error
@@ -181,6 +197,11 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
     scriptDirectory = self.location.href;
   } else if (document.currentScript) { // web
     scriptDirectory = document.currentScript.src;
+  }
+  // When MODULARIZE (and not _INSTANCE), this JS may be executed later, after document.currentScript
+  // is gone, so we saved it, and we use it here instead of any other info.
+  if (_scriptDir) {
+    scriptDirectory = _scriptDir;
   }
   // blob urls look like blob:http://site.com/etc/etc and we cannot infer anything from them.
   // otherwise, slice off the final part of the url to find the script directory.
@@ -1615,7 +1636,7 @@ function isDataURI(filename) {
 
 
 
-var wasmBinaryFile = 'a.out.wasm';
+var wasmBinaryFile = 'ffmpeg-flac-mp3.wasm';
 if (!isDataURI(wasmBinaryFile)) {
   wasmBinaryFile = locateFile(wasmBinaryFile);
 }
@@ -6151,6 +6172,28 @@ if (!Object.getOwnPropertyDescriptor(Module, "calledRun")) Object.defineProperty
 
 var calledRun;
 
+// Modularize mode returns a function, which can be called to
+// create instances. The instances provide a then() method,
+// must like a Promise, that receives a callback. The callback
+// is called when the module is ready to run, with the module
+// as a parameter. (Like a Promise, it also returns the module
+// so you can use the output of .then(..)).
+Module['then'] = function(func) {
+  // We may already be ready to run code at this time. if
+  // so, just queue a call to the callback.
+  if (calledRun) {
+    func(Module);
+  } else {
+    // we are not ready to call then() yet. we must call it
+    // at the same time we would call onRuntimeInitialized.
+    var old = Module['onRuntimeInitialized'];
+    Module['onRuntimeInitialized'] = function() {
+      if (old) old();
+      func(Module);
+    };
+  }
+  return Module;
+};
 
 /**
  * @constructor
@@ -6369,3 +6412,10 @@ run();
 
 
 
+
+
+  return Module
+}
+);
+})();
+export default Module;
