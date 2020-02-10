@@ -1,9 +1,21 @@
 # In the future I will use python to generate the Makefile from a template.
 # A perfect way to do that would be to use another Makefile to generate this one and run it.
 
-build/ffmpeg-flac-mp3.wasm build/ffmpeg-flac-mp3.js: build/ffmpeg-flac-mp3.bc
+all: ../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.js \
+     ../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.d.ts \
+     ../convert-io-www/public/ffmpeg-flac-mp3.wasm
+
+../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.js ../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.d.ts: build/ffmpeg-flac-mp3.js
+	mkdir -p ../convert-io-www/src/ffmpeg-js && \
+	cp build/ffmpeg-flac-mp3.js ../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.js && \
+	cp ffmpeg-js.d.ts ../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.d.ts
+
+../convert-io-www/public/ffmpeg-flac-mp3.wasm: build/ffmpeg-flac-mp3.wasm
+	cp build/ffmpeg-flac-mp3.wasm ../convert-io-www/public/ffmpeg-flac-mp3.wasm
+
+build/ffmpeg-flac-mp3.wasm build/ffmpeg-flac-mp3.js: build/ffmpeg-flac-mp3.bc pre.js
 	cd build && \
-	emcc ffmpeg.bc -s MODULARIZE=1 -s EXPORT_ES6=1 --pre-js ../pre.js -o ffmpeg-flac-mp3.js
+	emcc ffmpeg-flac-mp3.bc -s MODULARIZE=1 -s EXPORT_ES6=1 --pre-js ../pre.js -o ffmpeg-flac-mp3.js
 
 # TODO
 # Should also disable some other libraries like sdl?
@@ -27,7 +39,7 @@ build/libmp3lame/lib/libmp3lame.so:
 	emmake make -j8 && \
 	emmake make install
 
-.PHONY: clean
+.PHONY: all clean
 
 clean:
 	-rm -rf build/libmp3lame/* build/*.js build/*.wasm

@@ -28,16 +28,12 @@ var Module = typeof Module !== 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// We have access to module here, i.e. to the Module object *PASSED*
-// to the modularized JS file. This means client code can put some arbitrary properties
-// on module, and we can use it here. The property will be ffmpegFiles, and we'll use it
-// to create an IDBFS file system with those files. Another useful thing is: if the ffmpegFiles
-// property contains ReadableStreams, which it should, we can in fact stream those files into
-// the FS via FS.write.
+FS.unmount('/')
+FS.mount(WORKERFS, {
+    'files': Module['files'],
+}, '/')
+delete Module['files']
 
-function PREJSHEREBOYS() {
-
-}
 
 
 // Sometimes an existing Module object exists with properties
