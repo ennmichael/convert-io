@@ -1,15 +1,10 @@
 # In the future I will use python to generate the Makefile from a template.
 # A perfect way to do that would be to use another Makefile to generate this one and run it.
 
-all: ../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.js \
-     ../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.d.ts \
+all: ../convert-io-www/public/ffmpeg-js/flac-mp3.js \
      ../convert-io-www/public/ffmpeg-flac-mp3.wasm
 
-../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.d.ts: ffmpeg-js.d.ts
-	mkdir -p $(shell dirname $@) && \
-	cp $^ $@
-
-../convert-io-www/src/ffmpeg-js/ffmpeg-flac-mp3.js: build/ffmpeg-flac-mp3.js eslint-disable-comment.js
+../convert-io-www/public/ffmpeg-js/flac-mp3.js: build/ffmpeg-flac-mp3.js eslint-disable-comment.js
 	mkdir -p $(shell dirname $@) && \
 	cat eslint-disable-comment.js build/ffmpeg-flac-mp3.js > $@
 

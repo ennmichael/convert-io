@@ -28,11 +28,14 @@ var Module = typeof Module !== 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-Module['preRun'] = function() {
-    FS.mkdir('/work')
+Module['preRun'] = function () {
+    FS.mkdir('/in')
     FS.mount(WORKERFS, {
         'files': Module['files'] || [],
-    }, '/work')
+    }, '/in')
+
+    FS.mkdir('/out')
+    FS.mount(IDBFS, {}, '/out')
     delete Module['files']
 }
 
