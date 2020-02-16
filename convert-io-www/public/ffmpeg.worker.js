@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./ffmpeg/worker.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./ffmpeg.worker.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./ffmpeg/worker.js":
+/***/ "./ffmpeg.worker.js":
 /*!**************************!*\
-  !*** ./ffmpeg/worker.js ***!
+  !*** ./ffmpeg.worker.js ***!
   \**************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var f = function f() {\n  console.log('f');\n};\n\nf();\n\n//# sourceURL=webpack:///./ffmpeg/worker.js?");
+eval("onmessage = function (msg) {\n    var scriptName = 'flacMp3'\n    importScripts(`ffmpeg-${scriptName}.js`)\n    console.log('...')\n    console.log(self[scriptName])\n    self[scriptName]({\n        arguments: ['-formats'],\n        print(text) {\n            console.log(text)\n        },\n        printErr(text) {\n            console.log(text)\n        },\n        onAbort() {\n            console.log('aborted')\n        },\n    })\n    console.log('Done')\n}\n\n//# sourceURL=webpack:///./ffmpeg.worker.js?");
 
 /***/ })
 

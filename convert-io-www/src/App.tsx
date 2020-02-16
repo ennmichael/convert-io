@@ -3,12 +3,10 @@ import './App.scss'
 
 function App() {
     useEffect(() => {
-        (async function () {
-            const {default: ffmpeg} = await import('./ffmpeg-js/ffmpeg-flac-mp3')
-            ffmpeg({
-                arguments: ['-formats'],
-            })
-        })()
+        const worker = new Worker('ffmpeg.worker.js')
+        worker.postMessage({
+            x: 'y',
+        })
     }, [])
 
     return (

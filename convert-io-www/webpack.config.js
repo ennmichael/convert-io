@@ -6,12 +6,13 @@ const path = require('path')
 module.exports = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     entry: {
-        'worker': path.join(__dirname, 'ffmpeg-src', 'worker.js'),
+        'ffmpeg.worker': path.join(__dirname, 'ffmpeg.worker.js'),
     },
     output: {
-        path: path.join(__dirname, 'public', 'ffmpeg'),
+        path: path.join(__dirname, 'public'),
+        globalObject: 'self',
     },
-    module: {
+    /*module: {
         rules: [
             {
                 test: /\.js$/,
@@ -30,5 +31,5 @@ module.exports = {
                 },
             },
         ],
-    },
+    },*/
 }

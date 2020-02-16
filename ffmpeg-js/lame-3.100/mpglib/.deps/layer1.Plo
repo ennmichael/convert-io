@@ -1,86 +1,86 @@
 layer1.lo: layer1.c ../config.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/assert.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/features.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/assert.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/features.h \
   common.h mpg123.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdio.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/__config \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdio.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/wasi/api.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stddef.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stddef.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdint.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdint.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/string.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/string.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/string.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/strings.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/signal.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/signal.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/math.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/math.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/math.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdio.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/__config \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdio.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/wasi/api.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stddef.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stddef.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdint.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdint.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/string.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/string.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/string.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/strings.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/signal.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/signal.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/math.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/math.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/math.h \
   mpglib.h ../include/lame.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdarg.h \
-  /home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdarg.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/stdarg.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdarg.h \
   decode_i386.h layer1.h
 
 ../config.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/assert.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/assert.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/features.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/features.h:
 
 common.h:
 
 mpg123.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdio.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdio.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/__config:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/__config:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdio.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdio.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/wasi/api.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/wasi/api.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stddef.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stddef.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stddef.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stddef.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/stdint.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdint.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdint.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdint.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/string.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/string.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/string.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/string.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/string.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/string.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/strings.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/strings.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/signal.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/signal.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/signal.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/signal.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libcxx/math.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/math.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/math.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/math.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/math.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/math.h:
 
 mpglib.h:
 
 ../include/lame.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/compat/stdarg.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/stdarg.h:
 
-/home/blind-fuck/emsdk/upstream/emscripten/system/include/libc/stdarg.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdarg.h:
 
 decode_i386.h:
 

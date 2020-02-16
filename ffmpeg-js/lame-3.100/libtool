@@ -1,6 +1,6 @@
 #! /bin/bash
 # Generated automatically by config.status (lame) 3.100
-# Libtool was configured on host blind-fuck-A320MH:
+# Libtool was configured on host mogwai-Lenovo-ideapad-330-15IKB:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
@@ -91,7 +91,7 @@ EGREP="/bin/grep -E"
 FGREP="/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="/home/blind-fuck/emsdk/upstream/bin/llvm-nm"
+NM="/home/mogwai/emsdk/upstream/bin/llvm-nm"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -142,7 +142,7 @@ DLLTOOL="false"
 sharedlib_from_linklib_cmd="printf %s\\n"
 
 # The archiver.
-AR="/home/blind-fuck/emsdk/upstream/emscripten/emar"
+AR="/home/mogwai/emsdk/upstream/emscripten/emar"
 
 # Flags to create an archive.
 AR_FLAGS="cru"
@@ -154,7 +154,7 @@ archiver_list_spec="@"
 STRIP="strip"
 
 # Commands used to install an old-style archive.
-RANLIB="/home/blind-fuck/emsdk/upstream/emscripten/emranlib"
+RANLIB="/home/mogwai/emsdk/upstream/emscripten/emranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$tool_oldlib"
 old_postuninstall_cmds=""
 
@@ -162,7 +162,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="/home/blind-fuck/emsdk/upstream/emscripten/emcc"
+LTCC="/home/mogwai/emsdk/upstream/emscripten/emcc"
 
 # LTCC compiler flags.
 LTCFLAGS=" "
@@ -282,10 +282,10 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/home/blind-fuck/emsdk/upstream/lib/clang/10.0.0 /usr/lib/gcc/x86_64-linux-gnu/7.4.0 /usr/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /lib64 /usr/lib /home/blind-fuck/emsdk/upstream/lib /lib "
+sys_lib_search_path_spec="/home/mogwai/emsdk/upstream/lib/clang/11.0.0 /usr/lib/gcc/x86_64-linux-gnu/7.4.0 /usr/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /lib64 /usr/lib /home/mogwai/emsdk/upstream/lib /lib "
 
 # Detected run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib/i386-linux-gnu /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /usr/local/lib/i686-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 "
 
 # Explicit LT_SYS_LIBRARY_PATH set during ./configure time.
 configure_time_lt_sys_library_path=""
@@ -305,7 +305,7 @@ striplib="strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="/home/blind-fuck/emsdk/upstream/emscripten/emcc"
+LD="/home/mogwai/emsdk/upstream/emscripten/emcc"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -315,7 +315,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="/home/blind-fuck/emsdk/upstream/emscripten/emcc"
+CC="/home/mogwai/emsdk/upstream/emscripten/emcc"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -324,7 +324,7 @@ with_gcc=yes
 no_builtin_flag=" -fno-builtin -fno-rtti -fno-exceptions"
 
 # Additional compiler flags for building library objects.
-pic_flag=""
+pic_flag=" -fPIC -DPIC"
 
 # How to pass a linker flag through the compiler.
 wl="-Wl,"
