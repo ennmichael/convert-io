@@ -1,9 +1,9 @@
 import React, {ChangeEvent, useState} from 'react'
+import {saveAs} from 'file-saver'
 import './App.scss'
 
 function App() {
     const [inputFile, setInputFile] = useState<File>()
-    const [downloadUrl, setDownloadUrl] = useState("")
 
     function onFileChange(e: ChangeEvent<HTMLInputElement>) {
         if (e.target.files === null) {
@@ -18,7 +18,7 @@ function App() {
             return
         }
 
-        const worker = new Worker('ffmpeg.worker.js')
+        const worker =
         worker.postMessage({
             script: 'flacMp3',
             arguments: ['-i', `/input/${inputFile.name}`, '-f', 'mp3', '/regular-output/out.mp3'],
@@ -29,8 +29,7 @@ function App() {
             if (msg.data.type === 'stream-output') {
                 // TODO Use this when streaming the output
             } else if (msg.data.type === 'done') {
-                console.log('DONE')
-                setDownloadUrl(msg.data.outputFileURL)
+                saveAs(msg.data.outputFile, 'out.mp3')
             }
         }
     }
@@ -39,7 +38,6 @@ function App() {
         <div>
             <input onChange={onFileChange} type="file"/>
             <button onClick={onConvert}>Convert</button>
-            <a href={downloadUrl} download={'out.mp3'}>Download</a>
         </div>
     )
 }

@@ -8,45 +8,49 @@ onmessage = (msg) => {
             })
         },
         setupFilesystem(FS, WORKERFS) {
-            FS.mkdir('/regular-output')
-            FS.mkdir('/stream-output')
             FS.mkdir('/input')
+            FS.mkdir('/output')
 
             FS.mount(WORKERFS, {
-                'files': msg.data.files,
+                'files': [msg.data.inputFile],
             }, '/input')
 
-            const id = FS.makedev(43, 7)
-            FS.registerDevice(id, {
-                open(stream) {
-                },
-                write(stream, buffer, offset, length, position) {
-                    if (this.lastPosition !== undefined && position - this.lastPosition !== length) {
-                        const diff = position - (this.lastPosition + length)
-                        console.warn(`Writing to a different position in the stream. Difference is ${diff}.`)
-                    }
+            if (msg.data.streamOutput)
+                createOutputStreamDevice()
 
-                    this.lastPosition = position
-                    postMessage({
-                        type: 'stream-output',
-                        buffer: buffer.slice(offset, offset + length),
-                    })
-                    return length
-                },
-                close(stream) {
-                    postMessage({
-                        type: 'stream-done',
-                    })
-                },
-            })
-            FS.mkdev('/stream-output/dev', id)
+            function createOutputStreamDevice() {
+                const id = FS.makedev(43, 7)
+                FS.registerDevice(id, {
+                    open(stream) {
+                    },
+                    write(stream, buffer, offset, length, position) {
+                        if (this.lastPosition !== undefined && position - this.lastPosition !== length) {
+                            const diff = position - (this.lastPosition + length)
+                            console.warn(`Writing to a different position in the stream. Difference is ${diff}.`)
+                        }
+
+                        this.lastPosition = position
+                        postMessage({
+                            type: 'stream',
+                            data: buffer.slice(offset, offset + length),
+                        })
+                        return length
+                    },
+                    close(stream) {
+                    },
+                })
+                FS.mkdev(`/output/${msg.data.outputFileName}`, id)
+            }
         },
         programFinished(FS) {
-            const data = FS.readFile('/regular-output/out.mp3', {encoding: 'binary'})
-            const file = new File(data, 'out.mp3', {type: 'audio/mp3'})
-            const outputFileURL = URL.createObjectURL(file)
-            console.log(data.byteLength)
-            postMessage({type: 'done', outputFileURL})
+            let outputFile
+
+            if (!msg.data.streamOutput) {
+                const outputFileData = FS.readFile(`/output/${msg.data.outputFileName}`, {encoding: 'binary'})
+                const outputFile = new File([outputFileData], msg.data.outputFileName, {type: 'audio/mp3'})
+            }
+
+            postMessage({type: 'finished', outputFile})
         },
 
         arguments: [...msg.data.arguments, '-y'],
