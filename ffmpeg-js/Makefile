@@ -11,9 +11,9 @@ else
 all: ../convert-io-www/public/ffmpeg-flacMp3.js \
      ../convert-io-www/public/ffmpeg-flacMp3.wasm
 
-../convert-io-www/public/ffmpeg-flacMp3.js: build/ffmpeg-js/ffmpeg-flacMp3.js eslint-disable-comment.js
+../convert-io-www/public/ffmpeg-flacMp3.js: build/ffmpeg-js/ffmpeg-flacMp3.js
 	mkdir -p $(shell dirname $@) && \
-	cat eslint-disable-comment.js build/ffmpeg-js/ffmpeg-flacMp3.js > $@
+	cp $^ $@
 
 ../convert-io-www/public/ffmpeg-flacMp3.wasm: build/ffmpeg-js/ffmpeg-flacMp3.wasm
 	mkdir -p $(shell dirname $@) && \
@@ -36,7 +36,6 @@ endif
 # Should also disable some other libraries like sdl?
 # --disable-autodetect to disable auto detected external libs?
 
-# IS IT --ENABLE-CROSS-COMPILE?
 build/ffmpeg-js/flac-mp3.bc: build/libmp3lame/lib/libmp3lame.so
 	mkdir -p build/ffmpeg-js && \
 	cd ffmpeg && \

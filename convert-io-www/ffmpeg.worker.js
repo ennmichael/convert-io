@@ -34,6 +34,7 @@ onmessage = (msg) => {
                             type: 'stream',
                             data: buffer.slice(offset, offset + length),
                         })
+
                         return length
                     },
                     close(stream) {
@@ -47,12 +48,12 @@ onmessage = (msg) => {
 
             if (!msg.data.streamOutput) {
                 const outputFileData = FS.readFile(`/output/${msg.data.outputFileName}`, {encoding: 'binary'})
-                const outputFile = new File([outputFileData], msg.data.outputFileName, {type: 'audio/mp3'})
+                outputFile = new File([outputFileData], msg.data.outputFileName, {type: 'audio/mp3'})
             }
 
             postMessage({type: 'finished', outputFile})
         },
 
-        arguments: [...msg.data.arguments, '-y'],
+        arguments: ['-i', `/input/${msg.data.inputFile.name}`, `/output/${msg.data.outputFileName}`, '-y'],
     })
 }

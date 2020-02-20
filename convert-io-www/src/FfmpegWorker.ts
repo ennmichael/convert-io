@@ -1,4 +1,4 @@
-import {baseNameAndExtension} from './utils'
+import {baseNameAndExtension, capitalize} from './utils'
 
 export interface FileConversionOptions {
     inputFile: File
@@ -16,6 +16,12 @@ export default class FfmpegWorker {
 
     public available: boolean = true
     public onStream?: (data: Int8Array) => void
+    /**
+     * TODO
+     * This callback gets fired whenever a progress update happens. The progress parameter is a floating point
+     * number in the range [0, 1].
+     */
+    public onProgress?: (progress: number) => void
     public onFinished?: (outputFile?: File) => void
 
     public constructor() {
@@ -23,7 +29,7 @@ export default class FfmpegWorker {
     }
 
     public convertFile(opts: FileConversionOptions): void {
-        const [inputFileBaseName, _] = baseNameAndExtension(opts.inputFile.name)
+        const [inputFileBaseName, inputFormat] = baseNameAndExtension(opts.inputFile.name)
         const outputFileName = `${inputFileBaseName}.${opts.outputFormat}`
 
         this.available = false
@@ -32,6 +38,7 @@ export default class FfmpegWorker {
             inputFile: opts.inputFile,
             outputFileName,
             streamOutput: opts.streamOutput,
+            script: FfmpegWorker.getConversionScriptName(inputFormat, opts.outputFormat)
         })
 
         this.worker.onmessage = this.handleMessage.bind(this)
@@ -49,8 +56,14 @@ export default class FfmpegWorker {
                 this.available = true
                 break
             default:
-                throw new Error('Unhandled message type for ffmpeg worker')
+                throw new Error('Unknown message type')
         }
+    }
+
+    private static getConversionScriptName(inputFormat: string, outputFormat: string): string {
+        const a = [inputFormat, outputFormat]
+        a.sort()
+        return `${a[0]}${capitalize(a[1])}`
     }
 }
 
