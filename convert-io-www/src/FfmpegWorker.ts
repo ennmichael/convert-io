@@ -38,7 +38,8 @@ export default class FfmpegWorker {
             inputFile: opts.inputFile,
             outputFileName,
             streamOutput: opts.streamOutput,
-            script: FfmpegWorker.getConversionScriptName(inputFormat, opts.outputFormat)
+            script: FfmpegWorker.getConversionScriptName(inputFormat, opts.outputFormat),
+            extraArguments: ['-nostdin']
         })
 
         this.worker.onmessage = this.handleMessage.bind(this)

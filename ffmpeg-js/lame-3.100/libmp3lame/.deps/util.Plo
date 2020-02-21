@@ -1,272 +1,156 @@
-util.lo: util.c /usr/include/stdc-predef.h ../config.h \
- /usr/lib/gcc/x86_64-linux-gnu/7/include/float.h ../include/lame.h \
- /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h machine.h version.h \
- /usr/include/assert.h /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
- /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/string.h /usr/include/strings.h /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/ctype.h \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/sys/stat.h /usr/include/inttypes.h \
- /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h encoder.h util.h \
- l3side.h id3tag.h lame_global_flags.h tables.h
-
-/usr/include/stdc-predef.h:
+util.lo: util.c ../config.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/float.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/__config \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/float.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/float.h \
+  ../include/lame.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stddef.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stddef.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/stdarg.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdarg.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdio.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdio.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/wasi/api.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdint.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdint.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/features.h \
+  machine.h version.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/assert.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdlib.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/stdlib.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdlib.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/alloca.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/string.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/string.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/string.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/strings.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/math.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/math.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/math.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/limits.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/limits.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/limits.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/ctype.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/ctype.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/ctype.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/errno.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/errno.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/errno.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/fcntl.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/fcntl.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/sys/types.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/endian.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/sys/select.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/compat/sys/stat.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/sys/stat.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stat.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/inttypes.h \
+  /home/mogwai/emsdk/upstream/emscripten/system/include/libc/inttypes.h \
+  encoder.h util.h l3side.h id3tag.h lame_global_flags.h tables.h
 
 ../config.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/7/include/float.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/float.h:
+
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/__config:
+
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/float.h:
+
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/float.h:
 
 ../include/lame.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stddef.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stddef.h:
 
-/usr/include/stdio.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/stdarg.h:
 
-/usr/include/features.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdarg.h:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/wasi/api.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdint.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdint.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/libio.h:
-
-/usr/include/x86_64-linux-gnu/bits/_G_config.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/features.h:
 
 machine.h:
 
 version.h:
 
-/usr/include/assert.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/assert.h:
 
-/usr/include/stdlib.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/string.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/string.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/string.h:
 
-/usr/include/x86_64-linux-gnu/sys/types.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/strings.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/math.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/math.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/math.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/limits.h:
 
-/usr/include/endian.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/ctype.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/ctype.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/ctype.h:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/errno.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/select.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/fcntl.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/fcntl.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/sys/types.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/endian.h:
 
-/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/sys/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/compat/sys/stat.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/sys/stat.h:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+/home/mogwai/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stat.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libcxx/inttypes.h:
 
-/usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/string.h:
-
-/usr/include/strings.h:
-
-/usr/include/math.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h:
-
-/usr/include/limits.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/include/linux/limits.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/ctype.h:
-
-/usr/include/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/linux/errno.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/fcntl.h:
-
-/usr/include/x86_64-linux-gnu/bits/fcntl.h:
-
-/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
-
-/usr/include/linux/falloc.h:
-
-/usr/include/x86_64-linux-gnu/bits/stat.h:
-
-/usr/include/x86_64-linux-gnu/sys/stat.h:
-
-/usr/include/inttypes.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
-
-/usr/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+/home/mogwai/emsdk/upstream/emscripten/system/include/libc/inttypes.h:
 
 encoder.h:
 

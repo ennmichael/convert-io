@@ -67,7 +67,7 @@
 #endif
 
 /* system has 80 bit floats */
-/* #undef HAVE_IEEE854_FLOAT80 */
+#define HAVE_IEEE854_FLOAT80 1
 
 /* add ieee854_float80_t type */
 /* #undef HAVE_IEEE854_FLOAT80_T */
@@ -91,7 +91,7 @@
 /* add int64_t type */
 #define HAVE_INT64_T 1
 #ifndef HAVE_INT64_T
-#define A_INT64_T long
+#define A_INT64_T long long
 	typedef A_INT64_T int64_t;
 #endif
 
@@ -108,7 +108,7 @@
 #define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the <linux/soundcard.h> header file. */
-#define HAVE_LINUX_SOUNDCARD_H 1
+/* #undef HAVE_LINUX_SOUNDCARD_H */
 
 /* Define to 1 if the type `long double' works and has more range or precision
    than `double'. */
@@ -149,7 +149,7 @@
 #define HAVE_STRTOL 1
 
 /* Define to 1 if you have the <sys/soundcard.h> header file. */
-#define HAVE_SYS_SOUNDCARD_H 1
+/* #undef HAVE_SYS_SOUNDCARD_H */
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
@@ -182,7 +182,7 @@
 /* add uint64_t type */
 #define HAVE_UINT64_T 1
 #ifndef HAVE_UINT64_T
-#define A_UINT64_T unsigned long
+#define A_UINT64_T unsigned long long
 	typedef A_UINT64_T uint64_t;
 #endif
 
@@ -196,7 +196,7 @@
 #define HAVE_UNISTD_H 1
 
 /* Define if SSE intrinsics work. */
-#define HAVE_XMMINTRIN_H 1
+/* #undef HAVE_XMMINTRIN_H */
 
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST 
@@ -247,7 +247,7 @@
 #define SIZEOF_INT 4
 
 /* The size of `long', as computed by sizeof. */
-#define SIZEOF_LONG 8
+#define SIZEOF_LONG 4
 
 /* The size of `long double', as computed by sizeof. */
 /* #undef SIZEOF_LONG_DOUBLE */
@@ -262,7 +262,7 @@
 #define SIZEOF_UNSIGNED_INT 4
 
 /* The size of `unsigned long', as computed by sizeof. */
-#define SIZEOF_UNSIGNED_LONG 8
+#define SIZEOF_UNSIGNED_LONG 4
 
 /* The size of `unsigned long long', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_LONG_LONG 8

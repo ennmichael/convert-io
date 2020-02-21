@@ -54,6 +54,10 @@ onmessage = (msg) => {
             postMessage({type: 'finished', outputFile})
         },
 
-        arguments: ['-i', `/input/${msg.data.inputFile.name}`, `/output/${msg.data.outputFileName}`, '-y'],
+        arguments: [
+            '-i', `/input/${msg.data.inputFile.name}`,
+            `/output/${msg.data.outputFileName}`, '-y',
+            ...msg.data.extraArguments,
+        ],
     })
 }
