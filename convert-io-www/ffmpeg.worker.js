@@ -7,6 +7,12 @@ onmessage = (msg) => {
                 text,
             })
         },
+        printErr(text) {
+            postMessage({
+                type: 'stderr',
+                text,
+            })
+        },
         setupFilesystem(FS, WORKERFS) {
             FS.mkdir('/input')
             FS.mkdir('/output')

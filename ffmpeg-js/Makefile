@@ -27,7 +27,7 @@ all: everything
 # --disable-autodetect to disable auto detected external libs?
 COMMON_FLAGS = --disable-doc --disable-ffplay --disable-ffprobe --disable-swscale \
                --disable-avdevice --disable-everything  --enable-ffmpeg \
-               --enable-protocol=file --enable-protocol=pipe --enable-cross-compile \
+               --enable-protocol=file --enable-cross-compile \
                --cc=$(CC) --ar=$(AR) --ranlib=$(RANLIB) \
                --disable-pthreads --disable-w32threads --disable-os2threads --disable-network --disable-asm --disable-stripping \
                --enable-small --disable-runtime-cpudetect --disable-alsa --disable-appkit --disable-avfoundation \

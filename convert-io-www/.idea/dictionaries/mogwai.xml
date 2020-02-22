@@ -3,6 +3,7 @@
     <words>
       <w>ffmpeg</w>
       <w>ifeq</w>
+      <w>nostdin</w>
     </words>
   </dictionary>
 </component>
